@@ -39,7 +39,6 @@ export async function getSubregion(subregion, countryName){
     })
 
     const differentCountries = similarCountriesData.filter(country => country.name !== `${countryName}`)
-    console.log(differentCountries)
  
 
     function getRandomItemsFromArray(arr, numItems){

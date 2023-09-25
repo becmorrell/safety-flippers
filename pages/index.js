@@ -1,9 +1,24 @@
 import countryNames from '../data/countryNames.json'
 import Link from 'next/link'
+import Head from 'next/head'
+import Meta from '@/components/Meta'
 
 
 export default function Home() {
   return (
+    <>
+    <Head>
+            <title>
+                Nomad Insurance by SafetyFlippers.
+            </title>
+            <Meta
+                title={`Nomad Insurance by SafetyFlippers`}
+                url={`https://safety-flippers.vercel.app/`}
+                image={'/assets/seal.png'}
+                >
+            </Meta>
+
+        </Head>
     <main
       className={"flex min-h-screen bg-[#5cc6c7] flex-col items-center justify-between px-8 p-24"}
     >
@@ -28,5 +43,6 @@ export default function Home() {
         </div>
         
     </main>
+    </>
   )
 }

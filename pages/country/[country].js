@@ -5,7 +5,6 @@ import SimilarCountriesCard from "@/components/exploreCountriesCard"
 import Meta from "@/components/Meta"
 import useWindowSize from "@/hooks/useWindowSize"
 import { useEffect, useState } from "react"
-import Link from "next/link"
 import Head from "next/head"
 
 
@@ -31,9 +30,9 @@ export default function Country({ country, countryData, similarCountries, heroIm
                 Nomad Insurance in {capitaliseCountry} by SafetyFlippers
             </title>
             <Meta
-                capitaliseCountry={capitaliseCountry}
-                countryName={country}
-                countryImage={heroImages[0].src + '&w=1200&h=630'}
+                title={`Nomad Insurance in ${capitaliseCountry} by SafetyFlippers`}
+                url={`https://safety-flippers.vercel.app/country/${country}`}
+                image={heroImages[0].src + '&w=1200&h=630'}
                 >
             </Meta>
 
