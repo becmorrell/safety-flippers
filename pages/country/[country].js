@@ -18,7 +18,7 @@ export default function Country({ country, countryData, similarCountries, heroIm
         if(windowSize.width && !initialWidth){
             setInitialWidth(windowSize.width)
         }
-    }, [windowSize])
+    }, [windowSize, initialWidth])
 
 
     const split = country.split('')
@@ -92,6 +92,7 @@ export default function Country({ country, countryData, similarCountries, heroIm
                         return (
                             <SimilarCountriesCard
                                 country={country}
+                                key={country}
                             />
                         )
                     })}
@@ -101,24 +102,6 @@ export default function Country({ country, countryData, similarCountries, heroIm
             }
         </main>
         
-        <footer className="flex flex-col gap-4 bg-[#5cc6c7] pb-40 p-12">
-            <h3 className="text-3xl underline underline-offset-4">Contact me:</h3>
-            <p className="px-10 text-xl">Rebecca Morrell</p>
-            <Link
-                href="mailto:becmorrell91@gmail.com"
-                className="px-10 text-xl hover:underline underline-offset-4"
-                >
-                    becmorrell91@gmail.com
-            </Link>
-            
-            <Link 
-                href="https://www.linkedin.com/in/beccamorrell/" 
-                target="_blank" 
-                className="px-10 text-xl hover:underline underline-offset-4"
-                >
-                    linkedin.com/in/beccamorrell/
-            </Link>
-        </footer>
         </>
     )
 }
