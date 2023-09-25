@@ -21,7 +21,7 @@ export default function Document() {
             className="text-lg hidden md:flex"
             >SafetyFlippers 🦭 by &nbsp; 
               <Link
-                href="/"
+                href="https://www.linkedin.com/in/beccamorrell/"
                 target="_blank"
                 className="hover:underline underline-offset-4">
                 Rebecca Morrell
