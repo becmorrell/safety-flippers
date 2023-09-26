@@ -1,40 +1,33 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Overview:
 
-First, run the development server:
+- Whilst searching for nomad insurance for a specific country, I noticed there were no country-specific landing pages from insurance providers.
+- This is a big opportunity to improve SEO ranking for these specific search terms, decrease ad-spend by supporting these search terms organically and improving Click-Through-Rate with more engaging and relevant landing page previews.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun run dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- I have built a prototype to solve this problem, by dynamically creating a unique landing page for every country, without the need for manual content curation for them all!
+- Each country’s page displays relevant content, images and insurance information, as well as linking to the pages for similar countries. The latter improves SEO ranking, through increased user interaction and making the pages interconnected.
+- There is also a supporting sitemap for Google Search indexing.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## How it works:
+- Dynamic country page (/country/[country].js)
+    - Requested path is used to retrieve country data, similar countries and a hero image
+    - Uses NextJS Server Side Rendering (SSR), to return dynamic meta title, description and opengraph tags, whilst still using a dynamic page template. This is important for Google Search Indexing and previews when sharing via social channels.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- Country list page (/index.js)
+    - Links to landing pages for every country, to facilitate testing (I will not be submitting the site for Google Indexing!)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Sitemap (/sitemap.xml)
+    - Created with a NodeJS script to quickly create a sitemap for every country, to submit to Google Search Console.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Tech Used:
+- React.js
+- Next.js
+- Tailwind
+- Cypress
+- https://restcountries.com/
+- https://unsplash.com/documentation#search
+- js2xmlparser
+- Vercel (Deployment & Hosting)
