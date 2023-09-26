@@ -6,6 +6,10 @@
 
 
 - I have built a prototype to solve this problem, by dynamically creating a unique landing page for every country, without the need for manual content curation for them all!
+
+<img width="500" alt="Screenshot 2023-09-26 at 12 11 02" src="https://github.com/becmorrell/safety-flippers/assets/77584099/cad521ec-37f4-4411-8cd7-ddc919c558fb" alt="a search on google for nomad insurance barbados">
+
+
 - Each country’s page displays relevant content, images and insurance information, as well as linking to the pages for similar countries. The latter improves SEO ranking, through increased user interaction and making the pages interconnected.
 - There is also a supporting sitemap for Google Search indexing.
 
